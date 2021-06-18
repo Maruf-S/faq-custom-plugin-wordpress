@@ -136,7 +136,7 @@ SIDEBAR
 
 #faq-categories-sidebar-menu ul > li > .faq-category-posts-menu > a {
     display: block;
-    padding: 0 20px 0 15px;
+    padding: 8px 15px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
