@@ -44,7 +44,7 @@ $queried_item = get_queried_object();
                     </div>
                     <div id="faq-items-container">
 
-                        <?php if($queried_item): ?>
+                        <?php if( !is_post_type_archive('faq') && $queried_item): ?>
 
                             <?php
                             $category_faqs_query = new WP_Query(array(
