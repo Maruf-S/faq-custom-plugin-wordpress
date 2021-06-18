@@ -43,6 +43,5 @@ $faq_categories = get_terms(array(
             <?php endforeach; ?>
         </ul>
     </div>
-    <div id="faq-items-container"></div>
 <?php endif; ?>
 </div>

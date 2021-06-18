@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<?php
+$queried_item = get_queried_object();
+?>
+
 <div id="primary" class="content-area">
     <div class="content-container site-container">
 
@@ -27,7 +31,7 @@
                                 <li>
                                     <a data-description="<?php echo empty($faq_category->description) ? $faq_category->name : $faq_category->description; ?>"
                                        data-category="<?php echo $faq_category->term_id; ?>"
-                                       href="<?php echo get_term_link($faq_category->term_id); ?>">
+                                       href="<?php echo get_term_link($faq_category->term_id); ?>"<?php if($queried_item->term_id == $faq_category->term_id):?> class="active"<?php endif; ?>>
                                         <span><?php echo $faq_category->name; ?></span>
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -39,6 +43,35 @@
                         </ul>
                     </div>
                     <div id="faq-items-container">
+
+                        <?php if($queried_item): ?>
+
+                            <?php
+                            $category_faqs_query = new WP_Query(array(
+                                'post_type' => 'faq',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'faq_category',
+                                        'field' => 'term_id',
+                                        'terms' => $queried_item->term_id,
+                                    ),
+                                )
+                            ));
+
+                            $current_title = empty($faq_category->description) ? $faq_category->name : $faq_category->description;
+                            echo '<div class="">';
+
+                            echo '<h2>Browse: ' . $current_title . '</h2>';
+
+                            while($category_faqs_query->have_posts()) {
+                                $category_faqs_query->the_post();
+                                include FAQS_PATH . 'templates/faq-loop.php';
+                            }
+
+                            echo '</div>';
+                            ?>
+
+                        <?php endif; ?>
 
                     </div>
                 <?php endif; ?>
