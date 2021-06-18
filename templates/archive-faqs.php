@@ -38,7 +38,9 @@
                             <?php endforeach; ?>
                         </ul>
                     </div>
-                    <div id="faq-items-container"></div>
+                    <div id="faq-items-container">
+
+                    </div>
                 <?php endif; ?>
             </div>
 

@@ -89,6 +89,65 @@
 }
 
 
+/**
+SIDEBAR
+ */
+#faq-categories-sidebar-menu {}
+
+#faq-categories-sidebar-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#faq-categories-sidebar-menu ul > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 47px;
+    padding: 0 20px 0 15px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #00449F;
+    border-bottom: 1px solid #CCDFF5
+}
+
+#faq-categories-sidebar-menu ul > li > a svg {
+    fill: #828282;
+}
+
+#faq-categories-sidebar-menu ul > li > a.active,
+#faq-categories-sidebar-menu ul > li > a:hover {
+    background-color: #00449F;
+    color: #FFFFFF;
+}
+
+#faq-categories-sidebar-menu ul > li > a.active svg,
+#faq-categories-sidebar-menu ul > li > a:hover svg {
+    fill: #F2F2F2;
+}
+
+#faq-categories-sidebar-menu ul > li > .faq-category-posts-menu {
+    padding: 15px 0;
+    border-bottom: 1px solid #CCDFF5
+}
+
+#faq-categories-sidebar-menu ul > li > .faq-category-posts-menu > a {
+    display: block;
+    padding: 0 20px 0 15px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
+#faq-categories-sidebar-menu ul > li > .faq-category-posts-menu > a.active,
+#faq-categories-sidebar-menu ul > li > .faq-category-posts-menu > a:hover {
+    color: #00449F;
+}
+
 @media screen and (min-width: 992px){
     #faq-categories {
         display: grid;
