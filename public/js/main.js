@@ -22,7 +22,7 @@
             $('#faq-categories-menu a').removeClass('active');
             $this.addClass('active');
 
-            $.post(ajax_url, {
+            $.post('/wp-admin/admin-ajax.php', {
                 action: 'faq_category_posts',
                 category: selectedCategory,
                 description: $this.data('description')
