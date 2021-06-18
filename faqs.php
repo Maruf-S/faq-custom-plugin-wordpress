@@ -20,6 +20,7 @@ define( 'FAQS_VERSION', '1.0.0' );
 
 require_once FAQS_PATH . 'faq-category-tax.php';
 require_once FAQS_PATH . 'faq-cpt.php';
+require_once FAQS_PATH . 'faq-category-widget.php';
 
 wp_enqueue_style('faq-main-css', FAQS_URL . '/public/css/main.css', array(), FAQS_VERSION);
 wp_enqueue_script('faq-main-js', FAQS_URL . '/public/js/main.js', array('jquery'), FAQS_VERSION);
