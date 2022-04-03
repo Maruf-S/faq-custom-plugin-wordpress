@@ -85,7 +85,7 @@
 
 
 #faq-items-container .faq-loop-item--text {
-    max-width: 280px;
+    max-width: 95%;
 }
 
 
@@ -151,6 +151,6 @@ SIDEBAR
 @media screen and (min-width: 992px){
     #faq-categories {
         display: grid;
-        grid-template-columns: 280px 450px auto;
+        grid-template-columns: 20% 80% auto;
     }
 }
